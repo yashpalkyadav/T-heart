@@ -1,486 +1,1188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudyCycle | NEEV - Circular Marketplace for Students</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d',
-                            900: '#14532d',
-                        },
-                        accent: {
-                            500: '#06b6d4',
-                            600: '#0891b2',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #16a34a 0%, #0891b2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-</head>
-<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 glass border-b border-slate-200/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-brand-500/30">
-                    <i class="fa-solid fa-arrows-spin"></i>
-                </div>
-                <div>
-                    <span class="text-xl font-extrabold tracking-tight text-slate-900">StudyCycle</span>
-                    <span class="text-xs px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 font-semibold ml-1">NEEV</span>
-                </div>
-            </div>
-            
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#about" class="hover:text-brand-600 transition">About</a>
-                <a href="#how-it-works" class="hover:text-brand-600 transition">How It Works</a>
-                <a href="#business" class="hover:text-brand-600 transition">Business Model</a>
-                <a href="#impact" class="hover:text-brand-600 transition">Impact</a>
-                <a href="#team" class="hover:text-brand-600 transition">Team</a>
-            </nav>
+<title>StudyCycle — Learn More. Waste Less.</title>
 
-            <div class="flex items-center gap-3">
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition shadow-sm">
-                    Get Pitch Deck
-                </a>
-                <button class="md:hidden text-slate-600 text-xl focus:outline-none" id="menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+<meta name="description"
+content="StudyCycle is a student-focused circular marketplace for educational resources. Buy, sell, exchange and donate books and study materials.">
 
-    <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden fixed inset-x-0 top-20 z-40 bg-white border-b border-slate-200 p-6 space-y-4 md:hidden shadow-xl">
-        <a href="#about" class="block font-medium text-slate-700">About</a>
-        <a href="#how-it-works" class="block font-medium text-slate-700">How It Works</a>
-        <a href="#business" class="block font-medium text-slate-700">Business Model</a>
-        <a href="#impact" class="block font-medium text-slate-700">Impact</a>
-        <a href="#team" class="block font-medium text-slate-700">Team</a>
-    </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs font-semibold uppercase tracking-wider">
-                        <i class="fa-solid fa-bolt text-brand-500"></i> Start Up Stormers Presentation | Class XI[span_0](start_span)[span_0](end_span)
-                    </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                        Learn More. <br class="hidden sm:inline" />
-                        <span class="gradient-text">Waste Less.</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        A circular marketplace empowering students to buy, sell, swap, and donate academic resources seamlessly[span_1](start_span)[span_1](end_span). Building the New Era of Entrepreneurial Ecosystem & Vision (NEEV)[span_2](start_span)[span_2](end_span).
-                    </p>
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#how-it-works" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 transition shadow-lg shadow-brand-500/25 gap-2">
-                            Explore Platform <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#survey" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 transition gap-2">
-                            <i class="fa-solid fa-chart-pie text-slate-500"></i> Market Validation[span_3](start_span)[span_3](end_span)
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-5 relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-accent-500 rounded-3xl blur-2xl opacity-20 -z-10"></div>
-                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-2xl space-y-6">
-                        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-                            <div>
-                                <h3 class="font-bold text-slate-900">Platform Ecosystem</h3>
-                                <p class="text-xs text-slate-500">Key Pillars of StudyCycle</p>
-                            </div>
-                            <span class="w-3 h-3 rounded-full bg-brand-500 animate-ping"></span>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
-                                <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center">
-                                    <i class="fa-solid fa-tag"></i>
-                                </div>
-                                <h4 class="font-bold text-slate-900">SELL</h4>
-                                <p class="text-xs text-slate-500 mt-1">List usable books[span_4](start_span)[span_4](end_span)</p>
-                            </div>
-                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
-                                <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                                    <i class="fa-solid fa-repeat"></i>
-                                </div>
-                                <h4 class="font-bold text-slate-900">EXCHANGE</h4>
-                                <p class="text-xs text-slate-500 mt-1">Swap resources[span_5](start_span)[span_5](end_span)</p>
-                            </div>
-                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
-                                <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center">
-                                    <i class="fa-solid fa-hand-holding-heart"></i>
-                                </div>
-                                <h4 class="font-bold text-slate-900">DONATE</h4>
-                                <p class="text-xs text-slate-500 mt-1">Pass materials on[span_6](start_span)[span_6](end_span)</p>
-                            </div>
-                            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-center">
-                                <div class="w-10 h-10 mx-auto mb-2 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                                <h4 class="font-bold text-slate-900">DISCOVER</h4>
-                                <p class="text-xs text-slate-500 mt-1">Class & subject filter[span_7](start_span)[span_7](end_span)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Problem & Solution Section -->
-    <section id="about" class="py-20 bg-slate-100/70 border-y border-slate-200/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-600 tracking-wider uppercase">Market Need</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">The Challenge & Our Breakthrough Solution</h2>
-                <p class="text-slate-600">Addressing structural inefficiencies in educational resource consumption[span_8](start_span)[span_8](end_span).</p>
-            </div>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Problem Card -->
-                <div class="bg-white p-8 rounded-3xl border border-red-100 shadow-sm relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-2 h-full bg-red-400"></div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-slate-900">1. Problem Identification</h3>
-                    </div>
-                    <p class="text-slate-600 font-medium mb-4">Why do educational resources remain unused?</p>
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
-                            <span>Students stop using textbooks/reference books after one academic year[span_9](start_span)[span_9](end_span).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
-                            <span>Many usable books and stationery items sit idle at home[span_10](start_span)[span_10](end_span).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
-                            <span>Buying new academic resources creates unnecessary financial burden[span_11](start_span)[span_11](end_span).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-xmark text-red-400 mt-1"></i>
-                            <span>High-value resources get discarded instead of reused[span_12](start_span)[span_12](end_span).</span>
-                        </li>
-                    </ul>
-                </div>
+<style>
 
-                <!-- Solution Card -->
-                <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-2 h-full bg-brand-500"></div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-slate-900">2. Our Innovative Solution</h3>
-                    </div>
-                    <p class="text-slate-600 font-medium mb-4">Connecting peer-to-peer student needs[span_13](start_span)[span_13](end_span).</p>
-                    <ul class="space-y-3 text-sm text-slate-600">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 mt-1"></i>
-                            <span><strong>Sell:</strong> List usable materials with condition transparency[span_14](start_span)[span_14](end_span).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 mt-1"></i>
-                            <span><strong>Exchange:</strong> Swap needed titles without financial drag[span_15](start_span)[span_15](end_span).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 mt-1"></i>
-                            <span><strong>Donate:</strong> Direct transfer to underprivileged peers[span_16](start_span)[span_16](end_span).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-brand-500 mt-1"></i>
-                            <span><strong>USP:</strong> Dedicated circular ecosystem tailored exclusively for educational ecosystems[span_17](start_span)[span_17](end_span).</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+/* =========================================================
+   DESIGN SYSTEM
+========================================================= */
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-600 tracking-wider uppercase">Simplified Lifecycle</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">A Simple 5-Step Cycle</h2>
-                <p class="text-slate-600">Designed for fast adoption and ease of use across academic institutions[span_18](start_span)[span_18](end_span).</p>
-            </div>
+:root {
+    --green:#176b45;
+    --green-dark:#0d4930;
+    --green-light:#eaf4ee;
 
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <!-- Step 1 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                    <div>
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold mb-4 text-sm">1</div>
-                        <h4 class="font-bold text-slate-900 mb-2">LIST</h4>
-                        <p class="text-xs text-slate-600">Upload item details, condition, and price[span_19](start_span)[span_19](end_span).</p>
-                    </div>
-                </div>
-                <!-- Step 2 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                    <div>
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold mb-4 text-sm">2</div>
-                        <h4 class="font-bold text-slate-900 mb-2">SEARCH</h4>
-                        <p class="text-xs text-slate-600">Find resources by class, subject, or requirement[span_20](start_span)[span_20](end_span).</p>
-                    </div>
-                </div>
-                <!-- Step 3 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                    <div>
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold mb-4 text-sm">3</div>
-                        <h4 class="font-bold text-slate-900 mb-2">CONNECT</h4>
-                        <p class="text-xs text-slate-600">Students connect directly through the platform[span_21](start_span)[span_21](end_span).</p>
-                    </div>
-                </div>
-                <!-- Step 4 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                    <div>
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold mb-4 text-sm">4</div>
-                        <h4 class="font-bold text-slate-900 mb-2">EXCHANGE</h4>
-                        <p class="text-xs text-slate-600">Buy, swap, or donate the targeted resource[span_22](start_span)[span_22](end_span).</p>
-                    </div>
-                </div>
-                <!-- Step 5 -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between hover:shadow-md transition">
-                    <div>
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold mb-4 text-sm">5</div>
-                        <h4 class="font-bold text-slate-900 mb-2">REUSE</h4>
-                        <p class="text-xs text-slate-600">Resource gets a second life, eliminating waste[span_23](start_span)[span_23](end_span).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    --red:#c93d32;
+    --red-dark:#8f2922;
+    --red-light:#f9e9e7;
 
-    <!-- Business Model & Monetization -->
-    <section id="business" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="text-xs font-bold text-brand-500 tracking-wider uppercase">Monetization Strategy</span>
-                    <h2 class="text-3xl font-extrabold sm:text-4xl">Feasibility & Sustainable Revenue Channels</h2>
-                    <p class="text-slate-400">Multiple revenue streams driving sustainable financial viability while keeping end-user access affordable[span_24](start_span)[span_24](end_span).</p>
+    --yellow:#e6b63b;
+    --yellow-dark:#a77b11;
+    --yellow-light:#fbf4dc;
 
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                            <div class="p-3 bg-brand-500/10 text-brand-500 rounded-lg"><i class="fa-solid fa-percent"></i></div>
-                            <div>
-                                <h4 class="font-bold">Service Fee Model</h4>
-                                <p class="text-xs text-slate-400">Small commission on successful monetized transactions[span_25](start_span)[span_25](end_span).</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                            <div class="p-3 bg-brand-500/10 text-brand-500 rounded-lg"><i class="fa-solid fa-bullhorn"></i></div>
-                            <div>
-                                <h4 class="font-bold">Premium Listing & Ads</h4>
-                                <p class="text-xs text-slate-400">Paid seller promotion + targeted educational advertising[span_26](start_span)[span_26](end_span).</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-800/50 border border-slate-700/60">
-                            <div class="p-3 bg-brand-500/10 text-brand-500 rounded-lg"><i class="fa-solid fa-building-columns"></i></div>
-                            <div>
-                                <h4 class="font-bold">Institutional Partnerships</h4>
-                                <p class="text-xs text-slate-400">Subscription plans for schools, libraries, & coaching centers[span_27](start_span)[span_27](end_span).</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    --black:#101512;
+    --ink:#1b211d;
+    --muted:#69736d;
 
-                <div class="lg:col-span-6">
-                    <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl space-y-6">
-                        <h3 class="text-xl font-bold text-white border-b border-slate-700 pb-4">Illustrative Revenue Unit Economics</h3>
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-center text-sm">
-                                <span class="text-slate-400">Sample Resource Sale Price</span>
-                                <span class="font-semibold text-white">₹500[span_28](start_span)[span_28](end_span)</span>
-                            </div>
-                            <div class="flex justify-between items-center text-sm">
-                                <span class="text-slate-400">Platform Service Fee</span>
-                                <span class="font-semibold text-brand-500">5%[span_29](start_span)[span_29](end_span)</span>
-                            </div>
-                            <div class="border-t border-slate-700 pt-4 flex justify-between items-center font-bold text-lg">
-                                <span>Platform Revenue per Unit</span>
-                                <span class="text-brand-500">₹25[span_30](start_span)[span_30](end_span)</span>
-                            </div>
-                        </div>
-                        <div class="p-4 rounded-xl bg-brand-500/10 border border-brand-500/20 text-xs text-brand-300">
-                            <i class="fa-solid fa-circle-info mr-1"></i> Core Promise: <strong>Affordable • Accessible • Reusable</strong>[span_31](start_span)[span_31](end_span)
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    --paper:#f7f7f3;
+    --white:#ffffff;
+    --line:#e2e6e2;
 
-    <!-- Market Survey Validation -->
-    <section id="survey" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-600 tracking-wider uppercase">Validation</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Market Survey Insights</h2>
-                <p class="text-slate-600">Validating product-market fit via real student user responses[span_32](start_span)[span_32](end_span).</p>
-            </div>
+    --radius:18px;
+    --shadow:0 18px 50px rgba(16,21,18,.08);
+}
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
-                    <h4 class="font-bold text-slate-900 mb-2">Unused Resources</h4>
-                    <p class="text-sm text-slate-600 mb-4">Q1: Do you have unused educational resources at home?[span_33](start_span)[span_33](end_span)</p>
-                    <div class="w-full bg-slate-200 h-4 rounded-full overflow-hidden">
-                        <div class="bg-brand-600 h-full w-[85%]"></div>
-                    </div>
-                    <span class="inline-block mt-3 text-xs font-bold text-slate-500">High affirmative interest[span_34](start_span)[span_34](end_span)</span>
-                </div>
+/* =========================================================
+   RESET
+========================================================= */
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
-                    <h4 class="font-bold text-slate-900 mb-2">Purchase Intent</h4>
-                    <p class="text-sm text-slate-600 mb-4">Q2: Would you buy good-condition second-hand books?[span_35](start_span)[span_35](end_span)</p>
-                    <div class="w-full bg-slate-200 h-4 rounded-full overflow-hidden">
-                        <div class="bg-accent-600 h-full w-[78%]"></div>
-                    </div>
-                    <span class="inline-block mt-3 text-xs font-bold text-slate-500">Strong demand for discount books[span_36](start_span)[span_36](end_span)</span>
-                </div>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center">
-                    <h4 class="font-bold text-slate-900 mb-2">Exchange / Donation</h4>
-                    <p class="text-sm text-slate-600 mb-4">Q3: Would you exchange or donate usable items?[span_37](start_span)[span_37](end_span)</p>
-                    <div class="w-full bg-slate-200 h-4 rounded-full overflow-hidden">
-                        <div class="bg-purple-600 h-full w-[90%]"></div>
-                    </div>
-                    <span class="inline-block mt-3 text-xs font-bold text-slate-500">Overwhelming social interest[span_38](start_span)[span_38](end_span)</span>
-                </div>
-            </div>
-        </div>
-    </section>
+html {
+    scroll-behavior:smooth;
+}
 
-    <!-- Growth & Expansion Roadmap -->
-    <section id="impact" class="py-20 bg-slate-50 border-t border-slate-200/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-600 tracking-wider uppercase">Future Roadmap</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Phased Growth Strategy</h2>
-                <p class="text-slate-600">Scaling from classroom prototype to a full educational ecosystem[span_39](start_span)[span_39](end_span).</p>
-            </div>
+body {
+    font-family:"DM Sans",sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    overflow-x:hidden;
+}
 
-            <div class="relative max-w-4xl mx-auto">
-                <div class="space-y-6">
-                    <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
-                        <span class="font-extrabold text-brand-600 text-lg">Phase 1</span>
-                        <span class="text-sm font-semibold text-slate-800">One School / Local Community Pilot[span_40](start_span)[span_40](end_span)</span>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
-                        <span class="font-extrabold text-brand-600 text-lg">Phase 2</span>
-                        <span class="text-sm font-semibold text-slate-800">Multiple School Expansion[span_41](start_span)[span_41](end_span)</span>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
-                        <span class="font-extrabold text-brand-600 text-lg">Phase 3</span>
-                        <span class="text-sm font-semibold text-slate-800">City-Wide Student Network Integration[span_42](start_span)[span_42](end_span)</span>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
-                        <span class="font-extrabold text-brand-600 text-lg">Phase 4</span>
-                        <span class="text-sm font-semibold text-slate-800">Colleges & Coaching Communities Expansion[span_43](start_span)[span_43](end_span)</span>
-                    </div>
-                    <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center justify-between shadow-sm">
-                        <span class="font-extrabold text-brand-600 text-lg">Phase 5</span>
-                        <span class="text-sm font-semibold text-slate-800">Larger Educational Resource Marketplace[span_44](start_span)[span_44](end_span)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+img {
+    max-width:100%;
+    display:block;
+}
 
-    <!-- Team Section -->
-    <section id="team" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-xs font-bold text-brand-600 tracking-wider uppercase">Leadership</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Start Up Stormers Team</h2>
-                <p class="text-slate-600">Class XI Innovators driving research, design, validation, and presentation[span_45](start_span)[span_45](end_span).</p>
-            </div>
+a {
+    text-decoration:none;
+    color:inherit;
+}
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Member 1 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-100 text-brand-700 mx-auto flex items-center justify-center font-bold text-xl mb-4">CM</div>
-                    <h4 class="font-bold text-slate-900">Chanchal Meena[span_46](start_span)[span_46](end_span)</h4>
-                    <p class="text-xs text-brand-600 font-semibold mt-1">Problem Identification & Intro[span_47](start_span)[span_47](end_span)</p>
-                </div>
-                <!-- Member 2 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition duration-300">
-                    <div class="w-16 h-16 rounded-full bg-accent-100 text-accent-700 mx-auto flex items-center justify-center font-bold text-xl mb-4">D</div>
-                    <h4 class="font-bold text-slate-900">Drishti[span_48](start_span)[span_48](end_span)</h4>
-                    <p class="text-xs text-accent-600 font-semibold mt-1">Solution & Working Model[span_49](start_span)[span_49](end_span)</p>
-                </div>
-                <!-- Member 3 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition duration-300">
-                    <div class="w-16 h-16 rounded-full bg-purple-100 text-purple-700 mx-auto flex items-center justify-center font-bold text-xl mb-4">S</div>
-                    <h4 class="font-bold text-slate-900">Shristi[span_50](start_span)[span_50](end_span)</h4>
-                    <p class="text-xs text-purple-600 font-semibold mt-1">Market Survey & Business Model[span_51](start_span)[span_51](end_span)</p>
-                </div>
-                <!-- Member 4 -->
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center hover:-translate-y-1 transition duration-300">
-                    <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-700 mx-auto flex items-center justify-center font-bold text-xl mb-4">M</div>
-                    <h4 class="font-bold text-slate-900">Mahi[span_52](start_span)[span_52](end_span)</h4>
-                    <p class="text-xs text-amber-600 font-semibold mt-1">Marketing, Impact & Vision[span_53](start_span)[span_53](end_span)</p>
-                </div>
-            </div>
-        </div>
-    </section>
+button {
+    font:inherit;
+}
 
-    <!-- Footer Quote & CTA -->
-    <footer id="contact" class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-            <blockquote class="text-2xl sm:text-3xl font-bold text-white max-w-3xl mx-auto italic">
-                "Why should a book stop being useful when one student finishes reading it?[span_54](start_span)"[span_54](end_span)
-            </blockquote>
-            <p class="text-brand-500 font-bold tracking-widest uppercase text-sm">StudyCycle — Learn More. Waste Less.[span_55](start_span)[span_55](end_span)</p>
-            <div class="pt-4 text-xs text-slate-600 border-t border-slate-800 max-w-md mx-auto">
-                &copy; 2026 StudyCycle (NEEV) | Designed for Start Up Stormers Presentation[span_56](start_span)[span_56](end_span).
-            </div>
-        </div>
-    </footer>
+.container {
+    width:min(1180px, calc(100% - 40px));
+    margin:auto;
+}
 
-    <script>
-        // Toggle mobile menu
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
-</body>
-</html>
+.display {
+    font-family:"Manrope",sans-serif;
+}
+
+.upper {
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:11px;
+    font-weight:800;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    transition:.3s ease;
+}
+
+.header.scrolled {
+    background:rgba(247,247,243,.94);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav {
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo {
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-mark {
+    width:42px;
+    height:42px;
+    background:var(--green);
+    color:white;
+    display:grid;
+    place-items:center;
+    border-radius:11px;
+    font-size:17px;
+}
+
+.logo-name {
+    font-family:"Manrope";
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:-.04em;
+}
+
+.logo-sub {
+    display:block;
+    color:var(--red);
+    font-size:9px;
+    letter-spacing:.2em;
+    font-weight:800;
+    margin-top:-2px;
+}
+
+.nav-links {
+    display:flex;
+    align-items:center;
+    gap:30px;
+    font-size:13px;
+    font-weight:700;
+    color:#59625d;
+}
+
+.nav-links a {
+    transition:.2s;
+}
+
+.nav-links a:hover {
+    color:var(--green);
+}
+
+.nav-action {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.btn {
+    border:0;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:12px 18px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s ease;
+}
+
+.btn-dark {
+    background:var(--black);
+    color:white;
+}
+
+.btn-dark:hover {
+    background:var(--green);
+    transform:translateY(-2px);
+}
+
+.btn-green {
+    background:var(--green);
+    color:white;
+}
+
+.btn-green:hover {
+    background:var(--green-dark);
+    transform:translateY(-2px);
+}
+
+.btn-outline {
+    border:1px solid var(--line);
+    background:white;
+}
+
+.btn-outline:hover {
+    border-color:var(--green);
+    color:var(--green);
+}
+
+.menu-button {
+    display:none;
+    width:42px;
+    height:42px;
+    border:1px solid var(--line);
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height:850px;
+    padding:155px 0 100px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(90deg,#f7f7f3 0%,#f7f7f3 58%,#edf3ee 58%,#edf3ee 100%);
+}
+
+.hero::after {
+    content:"";
+    position:absolute;
+    right:-120px;
+    bottom:-180px;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    border:1px solid rgba(23,107,69,.14);
+}
+
+.hero-grid {
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    gap:75px;
+    align-items:center;
+}
+
+.hero-kicker {
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--green);
+    margin-bottom:25px;
+}
+
+.hero-kicker::before {
+    content:"";
+    width:25px;
+    height:2px;
+    background:var(--red);
+}
+
+.hero h1 {
+    font-family:"Manrope";
+    font-size:clamp(50px,6vw,82px);
+    line-height:.98;
+    letter-spacing:-.065em;
+    max-width:750px;
+    color:var(--black);
+}
+
+.hero h1 span {
+    color:var(--green);
+}
+
+.hero-copy {
+    max-width:610px;
+    color:#626c66;
+    font-size:17px;
+    line-height:1.8;
+    margin-top:27px;
+}
+
+.hero-buttons {
+    display:flex;
+    gap:12px;
+    margin-top:34px;
+}
+
+.hero-note {
+    display:flex;
+    gap:25px;
+    margin-top:35px;
+    font-size:12px;
+    color:#727b76;
+}
+
+.hero-note span {
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.hero-note i {
+    color:var(--green);
+}
+
+/* =========================================================
+   PRODUCT PANEL
+========================================================= */
+
+.product-wrap {
+    position:relative;
+}
+
+.product-card {
+    background:white;
+    border:1px solid #dce2dd;
+    border-radius:20px;
+    box-shadow:0 35px 80px rgba(19,38,28,.14);
+    overflow:hidden;
+}
+
+.product-top {
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 18px;
+    border-bottom:1px solid var(--line);
+}
+
+.window-dots {
+    display:flex;
+    gap:5px;
+}
+
+.window-dots span {
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#cdd3ce;
+}
+
+.product-brand {
+    font-size:9px;
+    letter-spacing:.18em;
+    font-weight:800;
+    color:#8b938e;
+}
+
+.product-user {
+    width:27px;
+    height:27px;
+    background:var(--green-light);
+    color:var(--green);
+    display:grid;
+    place-items:center;
+    border-radius:8px;
+    font-size:10px;
+}
+
+.product-body {
+    padding:24px;
+}
+
+.product-heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.product-heading small {
+    color:#8b938e;
+    font-size:10px;
+}
+
+.product-heading h3 {
+    font-family:"Manrope";
+    font-size:21px;
+    letter-spacing:-.04em;
+}
+
+.avatar {
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:var(--yellow-light);
+    color:var(--yellow-dark);
+    display:grid;
+    place-items:center;
+}
+
+.search {
+    margin-top:19px;
+    border:1px solid var(--line);
+    background:#fafbf9;
+    border-radius:10px;
+    padding:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#9aa19c;
+    font-size:11px;
+}
+
+.category-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin:18px 0 25px;
+}
+
+.category {
+    padding:12px 5px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    text-align:center;
+    background:#fff;
+}
+
+.category i {
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+.category p {
+    font-size:8px;
+    font-weight:800;
+}
+
+.category:nth-child(1) i {
+    color:var(--green);
+}
+
+.category:nth-child(2) i {
+    color:var(--red);
+}
+
+.category:nth-child(3) i {
+    color:var(--yellow-dark);
+}
+
+.category:nth-child(4) i {
+    color:#55746b;
+}
+
+.section-head {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.section-head strong {
+    font-size:11px;
+}
+
+.section-head span {
+    font-size:9px;
+    color:var(--green);
+    font-weight:800;
+}
+
+.resource {
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:11px;
+    border:1px solid var(--line);
+    border-radius:11px;
+    margin-top:8px;
+}
+
+.resource-icon {
+    width:38px;
+    height:38px;
+    border-radius:8px;
+    display:grid;
+    place-items:center;
+}
+
+.resource:nth-child(2) .resource-icon {
+    background:var(--red-light);
+    color:var(--red);
+}
+
+.resource:nth-child(3) .resource-icon {
+    background:var(--green-light);
+    color:var(--green);
+}
+
+.resource-info {
+    flex:1;
+}
+
+.resource-info strong {
+    display:block;
+    font-size:10px;
+}
+
+.resource-info span {
+    display:block;
+    font-size:8px;
+    color:#909892;
+    margin-top:2px;
+}
+
+.resource-price {
+    font-size:10px;
+    font-weight:800;
+}
+
+.product-footer {
+    background:var(--black);
+    color:white;
+    padding:13px 20px;
+    display:flex;
+    justify-content:space-between;
+    font-size:9px;
+}
+
+.product-footer span:last-child {
+    color:#77c397;
+    font-weight:800;
+}
+
+/* floating information */
+
+.float-card {
+    position:absolute;
+    background:white;
+    border:1px solid var(--line);
+    box-shadow:0 15px 35px rgba(20,30,24,.13);
+    border-radius:12px;
+    padding:12px 14px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.float-card.one {
+    left:-42px;
+    top:115px;
+}
+
+.float-card.two {
+    right:-30px;
+    bottom:80px;
+}
+
+.float-icon {
+    width:34px;
+    height:34px;
+    border-radius:8px;
+    display:grid;
+    place-items:center;
+}
+
+.float-card.one .float-icon {
+    background:var(--green-light);
+    color:var(--green);
+}
+
+.float-card.two .float-icon {
+    background:var(--yellow-light);
+    color:var(--yellow-dark);
+}
+
+.float-text small {
+    display:block;
+    font-size:8px;
+    color:#89928d;
+    font-weight:800;
+}
+
+.float-text strong {
+    font-size:11px;
+    display:block;
+}
+
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.section {
+    padding:115px 0;
+}
+
+.section-white {
+    background:white;
+}
+
+.section-paper {
+    background:var(--paper);
+}
+
+.section-dark {
+    background:var(--black);
+    color:white;
+}
+
+.section-label {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--green);
+    margin-bottom:18px;
+}
+
+.section-dark .section-label {
+    color:#73bd92;
+}
+
+.section-label::before {
+    content:"";
+    width:24px;
+    height:2px;
+    background:var(--red);
+}
+
+.section-title {
+    font-family:"Manrope";
+    font-size:clamp(38px,4.2vw,58px);
+    line-height:1.05;
+    letter-spacing:-.055em;
+    max-width:750px;
+}
+
+.section-description {
+    color:var(--muted);
+    max-width:620px;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.section-dark .section-description {
+    color:#aab4ae;
+}
+
+/* =========================================================
+   PROBLEM
+========================================================= */
+
+.problem-intro {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:end;
+}
+
+.problem-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+    margin-top:65px;
+    border:1px solid var(--line);
+}
+
+.problem-card {
+    background:white;
+    padding:30px;
+    min-height:245px;
+}
+
+.problem-number {
+    font-size:11px;
+    font-weight:800;
+    color:var(--red);
+}
+
+.problem-icon {
+    margin:35px 0 22px;
+    font-size:20px;
+}
+
+.problem-card h3 {
+    font-family:"Manrope";
+    font-size:18px;
+    letter-spacing:-.03em;
+}
+
+.problem-card p {
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.7;
+    margin-top:9px;
+}
+
+/* =========================================================
+   SOLUTION
+========================================================= */
+
+.solution-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:60px;
+}
+
+.solution-card {
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:32px;
+    min-height:270px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.solution-card:hover {
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.solution-card:nth-child(1) {
+    border-top:3px solid var(--green);
+}
+
+.solution-card:nth-child(2) {
+    border-top:3px solid var(--red);
+}
+
+.solution-card:nth-child(3) {
+    border-top:3px solid var(--yellow);
+}
+
+.solution-card:nth-child(4) {
+    border-top:3px solid #486b60;
+}
+
+.solution-icon {
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:#f2f4f1;
+    margin-bottom:28px;
+}
+
+.solution-card:nth-child(1) .solution-icon {
+    color:var(--green);
+}
+
+.solution-card:nth-child(2) .solution-icon {
+    color:var(--red);
+}
+
+.solution-card:nth-child(3) .solution-icon {
+    color:var(--yellow-dark);
+}
+
+.solution-card:nth-child(4) .solution-icon {
+    color:#486b60;
+}
+
+.solution-card h3 {
+    font-family:"Manrope";
+    font-size:22px;
+    letter-spacing:-.04em;
+}
+
+.solution-card p {
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.8;
+    max-width:480px;
+    margin-top:10px;
+}
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.workflow {
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid #38403b;
+    border-bottom:1px solid #38403b;
+}
+
+.workflow-item {
+    padding:30px 23px;
+    border-right:1px solid #38403b;
+    min-height:250px;
+}
+
+.workflow-item:last-child {
+    border-right:0;
+}
+
+.workflow-num {
+    font-size:10px;
+    color:#72bd91;
+    font-weight:800;
+}
+
+.workflow-item h3 {
+    font-family:"Manrope";
+    font-size:18px;
+    margin-top:45px;
+}
+
+.workflow-item p {
+    color:#929d96;
+    font-size:12px;
+    line-height:1.7;
+    margin-top:10px;
+}
+
+.workflow-item:last-child {
+    background:#153b29;
+}
+
+/* =========================================================
+   BUSINESS
+========================================================= */
+
+.business-layout {
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:80px;
+    align-items:start;
+}
+
+.revenue-list {
+    margin-top:45px;
+}
+
+.revenue {
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.revenue-icon {
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    background:var(--green-light);
+    color:var(--green);
+    display:grid;
+    place-items:center;
+}
+
+.revenue h3 {
+    font-family:"Manrope";
+    font-size:16px;
+}
+
+.revenue p {
+    font-size:12px;
+    color:var(--muted);
+    margin-top:5px;
+}
+
+.unit-card {
+    background:var(--black);
+    color:white;
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+    overflow:hidden;
+}
+
+.unit-card::after {
+    content:"";
+    position:absolute;
+    width:240px;
+    height:240px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    right:-80px;
+    top:-80px;
+}
+
+.unit-top {
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #303833;
+    padding-bottom:22px;
+}
+
+.unit-top span {
+    color:#87928b;
+    font-size:10px;
+}
+
+.unit-top strong {
+    color:#76bd92;
+    font-size:10px;
+}
+
+.unit-row {
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+    border-bottom:1px solid #303833;
+    font-size:13px;
+}
+
+.unit-row span {
+    color:#9ca59f;
+}
+
+.unit-result {
+    margin-top:25px;
+    padding:20px;
+    background:#153b29;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.unit-result small {
+    display:block;
+    color:#94ad9e;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+}
+
+.unit-result strong {
+    font-family:"Manrope";
+    color:#7ed09b;
+    font-size:27px;
+}
+
+/* =========================================================
+   VALIDATION
+========================================================= */
+
+.validation-head {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:40px;
+}
+
+.validation-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:55px;
+}
+
+.validation-card {
+    background:white;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px;
+}
+
+.validation-card:nth-child(1) {
+    border-top:3px solid var(--green);
+}
+
+.validation-card:nth-child(2) {
+    border-top:3px solid var(--yellow);
+}
+
+.validation-card:nth-child(3) {
+    border-top:3px solid var(--red);
+}
+
+.validation-question {
+    font-family:"Manrope";
+    font-size:16px;
+    line-height:1.35;
+    margin:18px 0 28px;
+}
+
+.metric {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+}
+
+.metric strong {
+    font-family:"Manrope";
+    font-size:38px;
+    letter-spacing:-.06em;
+}
+
+.metric span {
+    font-size:10px;
+    color:#89928d;
+}
+
+.bar {
+    height:6px;
+    background:#e8ebe8;
+    border-radius:99px;
+    margin-top:12px;
+    overflow:hidden;
+}
+
+.bar div {
+    height:100%;
+    border-radius:99px;
+    width:0;
+    transition:1.2s ease;
+}
+
+.validation-card:nth-child(1) .bar div {
+    background:var(--green);
+}
+
+.validation-card:nth-child(2) .bar div {
+    background:var(--yellow);
+}
+
+.validation-card:nth-child(3) .bar div {
+    background:var(--red);
+}
+
+.validation-note {
+    font-size:10px;
+    color:#8b938e;
+    margin-top:35px;
+}
+
+/* =========================================================
+   IMPACT STATEMENT
+========================================================= */
+
+.impact {
+    background:var(--green);
+    color:white;
+    padding:90px 0;
+    position:relative;
+    overflow:hidden;
+}
+
+.impact::before {
+    content:"02";
+    position:absolute;
+    right:4%;
+    top:-75px;
+    font-family:"Manrope";
+    font-size:260px;
+    font-weight:800;
+    color:rgba(255,255,255,.045);
+}
+
+.impact-layout {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.impact h2 {
+    font-family:"Manrope";
+    font-size:clamp(42px,5vw,67px);
+    line-height:1;
+    letter-spacing:-.06em;
+}
+
+.impact p {
+    color:#d0e2d7;
+    line-height:1.8;
+}
+
+.impact-stats {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:rgba(255,255,255,.16);
+}
+
+.impact-stat {
+    padding:28px;
+    background:var(--green);
+}
+
+.impact-stat strong {
+    font-family:"Manrope";
+    font-size:38px;
+}
+
+.impact-stat span {
+    display:block;
+    color:#c6dfcf;
+    font-size:11px;
+    margin-top:5px;
+}
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap {
+    margin-top:60px;
+    position:relative;
+}
+
+.roadmap-line {
+    position:absolute;
+    top:23px;
+    left:5%;
+    right:5%;
+    height:1px;
+    background:var(--line);
+}
+
+.roadmap-grid {
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    position:relative;
+}
+
+.phase {
+    padding:0 14px;
+}
+
+.phase-dot {
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:white;
+    border:2px solid var(--green);
+    color:var(--green);
+    display:grid;
+    place-items:center;
+    margin:auto;
+    font-size:11px;
+    font-weight:800;
+    position:relative;
+}
+
+.phase.active .phase-dot {
+    background:var(--green);
+    color:white;
+}
+
+.phase h3 {
+    font-family:"Manrope";
+    text-align:center;
+    margin-top:20px;
+    font-size:15px;
+}
+
+.phase p {
+    text-align:center;
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.6;
+    margin-top:8px;
+}
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top
